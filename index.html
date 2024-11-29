@@ -73,54 +73,47 @@
                 <p>
                   <h2>The Collection</h2>
                   <div class="image-grid">
-                    <div width="auto" height="auto"><a href="https://opensea.io/assets/base/0xcd5992b524d6f2b4f43fefa7790cf169f140da21/1" style="border: none;">
-                      <img id="img1" src="./assets/imgs/previews/light/001.jpg"/></a>
+                    <div width="auto" height="auto">
+                      <a style="border: none;"><img id="img1" src="./assets/imgs/previews/light/1.jpg"/></a>
                       <i>Recursive Tree (a)</i> <a onclick="changeImage('img1')">+/-</a><br>
                       <p class="desc">Reserved</p>
                     </div>
-                    <div width="auto" height="auto"><a href="https://opensea.io/assets/base/0xcd5992b524d6f2b4f43fefa7790cf169f140da21/2" style="border: none;">
-                      <img id="img2" src="./assets/imgs/previews/light/002.jpg"/></a>
-                      <i>ASCII Tree (a)</i><br>
+                    <div width="auto" height="auto"><a style="border: none;"><img id="img2" src="./assets/imgs/previews/light/2.jpg"/></a>
+                      <i>ASCII Tree (a)</i> <a onclick="changeImage('img2')">+/-</a><br>
                       <p class="desc">$200 (USDC)</p>
                     </div>
-                    <div width="auto" height="auto"><a href="https://opensea.io/assets/base/0xcd5992b524d6f2b4f43fefa7790cf169f140da21/3" style="border: none;">
-                      <img id="img3" src="./assets/imgs/previews/light/003.jpg"/></a>
-                      <i>Modulo (a)</i><br>
+                    <div width="auto" height="auto"><a style="border: none;"> <img id="img3" src="./assets/imgs/previews/light/3.jpg"/></a>
+                      <i>Modulo (a)</i> <a onclick="changeImage('img3')">+/-</a><br>
                       <p class="desc">$200 (USDC)</p>
                     </div>
                   </div>
                   <br>
                   <div class="image-grid">
-                    <div width="auto" height="auto"><a href="https://opensea.io/assets/base/0xcd5992b524d6f2b4f43fefa7790cf169f140da21/4" style="border: none;">
-                      <img id="img4" src="./assets/imgs/previews/light/004.jpg"/></a>
-                      <i>Binary Tree (a)</i><br>
+                    <div width="auto" height="auto"><a style="border: none;"> <img id="img4" src="./assets/imgs/previews/light/4.jpg"/></a>
+                      <i>Binary Tree (a)</i> <a onclick="changeImage('img4')">+/-</a><br>
                       <p class="desc">$200 (USDC)</p>
                     </div>
-                    <div width="auto" height="auto"><a href="https://opensea.io/assets/base/0xcd5992b524d6f2b4f43fefa7790cf169f140da21/5" style="border: none;">
-                      <img id="img5" src="./assets/imgs/previews/light/005.jpg"/></a>
-                      <i>Triangles (a)</i><br>
+                    <div width="auto" height="auto"><a style="border: none;"> <img id="img5" src="./assets/imgs/previews/light/5.jpg"/></a>
+                      <i>Triangles (a)</i><a onclick="changeImage('img5')">+/-</a><br>
                       <p class="desc">$200 (USDC)<p>
                     </div>
-                    <div width="auto" height="auto"><a href="https://opensea.io/assets/base/0xcd5992b524d6f2b4f43fefa7790cf169f140da21/6" style="border: none;">
-                      <img id="img6" src="./assets/imgs/previews/light/006.jpg"/></a>
-                      <i>File Tree (a)</i><br>
+                    <div width="auto" height="auto"><a style="border: none;"> <img id="img6" src="./assets/imgs/previews/light/6.jpg"/></a>
+                      <i>File Tree (a)</i><a onclick="changeImage('img6')">+/-</a><br>
                       <p class="desc">Reserved<p>
                     </div>
                   </div> 
                   <br> 
                   <div class="image-grid">
-                    <div width="auto" height="auto"><a href="https://opensea.io/assets/base/0xcd5992b524d6f2b4f43fefa7790cf169f140da21/7" style="border: none;">
-                      <img id="img7" src="./assets/imgs/previews/light/007.jpg"/></a>
-                      <i>Binary Tree (a)</i><br>
+                    <div width="auto" height="auto"><a style="border: none;"> <img id="img7" src="./assets/imgs/previews/light/7.jpg"/></a>
+                      <i>Binary Tree (a)</i><a onclick="changeImage('img7')">+/-</a><br>
                       <p class="desc">$200 (USDC)<p>
                     </div>
-                    <div width="auto" height="auto"><a href="https://opensea.io/assets/base/0xcd5992b524d6f2b4f43fefa7790cf169f140da21/8" style="border: none;">
-                      <img id="img8" src="./assets/imgs/previews/light/008.jpg"/></a>
-                      <i>Dutree (a)</i><br>
+                    <div width="auto" height="auto"><a style="border: none;"> <img id="img8" src="./assets/imgs/previews/light/8.jpg"/></a>
+                      <i>Dutree (a)</i><a onclick="changeImage('img8')">+/-</a><br>
                       <p class="desc">Reserved<p>
                     </div>
                     <div width="auto" height="auto">
-                      <img id="img9" src="./assets/imgs/previews/light/009.jpg"/>
+                      <img id="img9" src="./assets/imgs/previews/light/9.jpg"/>
                       <p class="desc">...</p><br>
                     </div>
                  </div> 
@@ -152,11 +145,39 @@
       function changeImage(id) {
             const img = document.getElementById(id);
             const path = './assets/imgs/previews';
-            img.src.includes('dark') ? img.src = path + '/light/00' + split_at_index(id,3) + '.jpg' : img.src = path + '/dark/00' + split_at_index(id,3) + '.jpg';
+            img.src.includes('dark') ? img.src = path + '/light/' + split_at_index(id,3) + '.jpg' : img.src = path + '/dark/' + split_at_index(id,3) + '.jpg';
       }
       function split_at_index(value, index) {
         return value.substring(index);
       }
+      document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('click', () => {
+    const fullScreen = document.createElement('div');
+    fullScreen.style.position = 'fixed';
+    fullScreen.style.top = '0';
+    fullScreen.style.left = '0';
+    fullScreen.style.width = '100vw';
+    fullScreen.style.height = '100vh';
+    fullScreen.style.background = 'rgba(0, 0, 0, 0.9)';
+    fullScreen.style.display = 'flex';
+    fullScreen.style.justifyContent = 'center';
+    fullScreen.style.alignItems = 'center';
+    fullScreen.style.zIndex = '9999';
+
+    const fullImg = document.createElement('img');
+    fullImg.src = img.src;
+    fullImg.style.maxWidth = '90%';
+    fullImg.style.maxHeight = '90%';
+    fullImg.style.cursor = 'zoom-out';
+
+    fullScreen.appendChild(fullImg);
+    document.body.appendChild(fullScreen);
+
+    fullScreen.addEventListener('click', () => {
+      document.body.removeChild(fullScreen);
+    });
+  });
+});
   </script>
   </body>
 </html>
