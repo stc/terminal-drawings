@@ -1,183 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>terminal-drawings</title>
-    <link rel="stylesheet" href="./assets/terminal.min.css" />
-    <link rel="stylesheet" href="./assets/normalize.css" />
 
-    <style>
-        .components-grid {
-          display: grid;
-          grid-column-gap: 1.4em;
-          grid-template-columns: auto;
-          grid-template-rows: auto;
-        }
-    
-        .image-grid {
-          display: grid;
-          grid-template-rows: auto;
-          grid-gap: 1em;
-          grid-template-columns: repeat(
-            auto-fit,
-            minmax(calc(var(--page-width) / 12), 1fr)
-          );
-        }
-    
-        @media only screen and (min-width: 70em) {
-          .components-grid {
-            grid-template-columns: 3fr 9fr;
-          }
-    
-          .components-grid aside {
-            position: sticky;
-            top: calc(var(--global-space) * 2);
-          }
-        }
+<head>
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>terminal-drawings</title>
+  <link rel="stylesheet" href="./assets/terminal.min.css" />
+  <link rel="stylesheet" href="./assets/normalize.css" />
 
-        .desc {
-          color:#999;
-        }
-      </style>
-  </head>
-  <body>
-    <div class="container">
-        <div class="terminal-nav">
-            <header class="terminal-logo">
-                <div class="logo terminal-prompt"><a href="http://stc.github.io/terminal-drawings" class="no-style">Terminal Drawings</a></div>
-            </header>
-        </div>
-        <div class="container">
-            <p>Algorithmic plotter artworks, created with a command-line interface</p>
-            <hr />
-            <section>
-                <p><img src="./assets/imgs/triptych-view.jpg"/></p>
-                <p>
-                  Terminal Drawings are a collection of machine drawn images that involve text based simulations to represent associative space. As the computer terminal is a low-level ontological tool for interfacing the real world with computational landscapes, these series resemble the performative mechanics of such gateways. 
-                </p>
-                <p>
-                  Given that digital information doesn't inherently exist in physical space, we can use any structure to illustrate relationships between files, folders, thoughts and other conceptual entities.
-                </p>
-                <hr />
-                <p><img src="./assets/imgs/closeup-view.jpg"/></p>
-                <p>
-                  Artificial memory architectures often grapple with the dichotomy between associative and spatial memory paradigms. While spatial memory frameworks prioritize the organization of information in physical or abstract spatial arrangements, reflecting the human brain's propensity for spatial cognition, associative memory models prioritize the interconnectedness of information, emphasizing the strength of relationships between data points.
-                </p>
-                <p>  
-                  Although the drawings are based on text-based characters and operator symbols from low-level computer code, their structures escape verbal determinations and function as an absorption surface for conventional formulae. Without relying on language, form becomes the defining element— a gesture that shapes hybrid ontologies of existential space.
-                </p>
-                <hr />
-                <p>
-                  <h2>The Collection</h2>
-                  <div class="image-grid">
-                    <div width="auto" height="auto">
-                      <a style="border: none;"><img id="img1" src="./assets/imgs/previews/light/1.jpg"/></a>
-                      <i>Recursive Tree (a)</i> <a onclick="changeImage('img1')">+/-</a><br>
-                      <p class="desc">Reserved</p>
-                    </div>
-                    <div width="auto" height="auto"><a style="border: none;"><img id="img2" src="./assets/imgs/previews/light/2.jpg"/></a>
-                      <i>ASCII Tree (a)</i> <a onclick="changeImage('img2')">+/-</a><br>
-                      <p class="desc">$200 (USDC)</p>
-                    </div>
-                    <div width="auto" height="auto"><a style="border: none;"> <img id="img3" src="./assets/imgs/previews/light/3.jpg"/></a>
-                      <i>Modulo (a)</i> <a onclick="changeImage('img3')">+/-</a><br>
-                      <p class="desc">$200 (USDC)</p>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="image-grid">
-                    <div width="auto" height="auto"><a style="border: none;"> <img id="img4" src="./assets/imgs/previews/light/4.jpg"/></a>
-                      <i>Binary Tree (a)</i> <a onclick="changeImage('img4')">+/-</a><br>
-                      <p class="desc">$200 (USDC)</p>
-                    </div>
-                    <div width="auto" height="auto"><a style="border: none;"> <img id="img5" src="./assets/imgs/previews/light/5.jpg"/></a>
-                      <i>Triangles (a)</i><a onclick="changeImage('img5')">+/-</a><br>
-                      <p class="desc">$200 (USDC)<p>
-                    </div>
-                    <div width="auto" height="auto"><a style="border: none;"> <img id="img6" src="./assets/imgs/previews/light/6.jpg"/></a>
-                      <i>File Tree (a)</i><a onclick="changeImage('img6')">+/-</a><br>
-                      <p class="desc">Reserved<p>
-                    </div>
-                  </div> 
-                  <br> 
-                  <div class="image-grid">
-                    <div width="auto" height="auto"><a style="border: none;"> <img id="img7" src="./assets/imgs/previews/light/7.jpg"/></a>
-                      <i>Binary Tree (a)</i><a onclick="changeImage('img7')">+/-</a><br>
-                      <p class="desc">$200 (USDC)<p>
-                    </div>
-                    <div width="auto" height="auto"><a style="border: none;"> <img id="img8" src="./assets/imgs/previews/light/8.jpg"/></a>
-                      <i>Dutree (a)</i><a onclick="changeImage('img8')">+/-</a><br>
-                      <p class="desc">Reserved<p>
-                    </div>
-                    <div width="auto" height="auto">
-                      <img id="img9" src="./assets/imgs/previews/light/9.jpg"/>
-                      <p class="desc">...</p><br>
-                    </div>
-                 </div> 
-                </p>
-                <hr />
-                <p>
-                  All pieces are created with a command-line interface and available as unique editions of hand signed physical plotter drawings + corresponding NFTs on Ethereum (Base). The NFT (Certificate of Authenticity) acts as provenance for the physical piece shipped, any secondary sale of a work must include the physical. 
-                </p>
-                <p>  
-                  Available layouts
-                </p>
-                <p>  
-                  - Black ink on light grey (perla) Tiziano (160g/m2) paper<br>
-                  - Silver ink on black photo cardboard (230g/m2)
-                </p>
-                <p>  
-                  Size: 210 x 297 mm (A4)
-                </p>
-                <hr />
-                <p>
-                  Explore the complete series on the blockchain on <a href="https://opensea.io/collection/terminaldrawings">OpenSea</a>. The collection is currently available for private sale only. If you're interested in a specific piece, write a DM on <a href="https://x.com/_stc">X (Twitter)</a>,  <a href="https://warpcast.com/stc">Farcaster</a> or <a href="https://www.instagram.com/0xstc/">Instagram</a>.  
-                </p>
-                <br>
-                <p>© Agoston Nagy 2024</p>
-            </section>
-        </div>
+  <style>
+    .components-grid {
+      display: grid;
+      grid-column-gap: 1.4em;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-rows: auto;
+      grid-gap: 1em;
+      grid-template-columns: repeat(auto-fit,
+          minmax(calc(var(--page-width) / 12), 1fr));
+    }
+
+    @media only screen and (min-width: 70em) {
+      .components-grid {
+        grid-template-columns: 3fr 9fr;
+      }
+
+      .components-grid aside {
+        position: sticky;
+        top: calc(var(--global-space) * 2);
+      }
+    }
+
+    .desc {
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="terminal-nav">
+      <header class="terminal-logo">
+        <div class="logo terminal-prompt"><a href="http://stc.github.io/terminal-drawings" class="no-style">Terminal
+            Drawings</a></div>
+      </header>
     </div>
-    <script>
-      function changeImage(id) {
-            const img = document.getElementById(id);
-            const path = './assets/imgs/previews';
-            img.src.includes('dark') ? img.src = path + '/light/' + split_at_index(id,3) + '.jpg' : img.src = path + '/dark/' + split_at_index(id,3) + '.jpg';
+    <div class="container">
+      <p>Algorithmic plotter artworks, created with a command-line interface</p>
+      <hr />
+      <section>
+        <p><img src="./assets/imgs/triptych-view.jpg" /></p>
+        <p>
+          Terminal Drawings are a collection of machine drawn images that involve text based simulations to represent
+          associative space. As the computer terminal is a low-level ontological tool for interfacing the real world
+          with computational landscapes, these series resemble the performative mechanics of such gateways.
+        </p>
+        <p>
+          Given that digital information doesn't inherently exist in physical space, we can use any structure to
+          illustrate relationships between files, folders, thoughts and other conceptual entities.
+        </p>
+        <hr />
+        <p><img src="./assets/imgs/closeup-view.jpg" /></p>
+        <p>
+          Artificial memory architectures often grapple with the dichotomy between associative and spatial memory
+          paradigms. While spatial memory frameworks prioritize the organization of information in physical or abstract
+          spatial arrangements, reflecting the human brain's propensity for spatial cognition, associative memory models
+          prioritize the interconnectedness of information, emphasizing the strength of relationships between data
+          points.
+        </p>
+        <p>
+          Although the drawings are based on text-based characters and operator symbols from low-level computer code,
+          their structures escape verbal determinations and function as an absorption surface for conventional formulae.
+          Without relying on language, form becomes the defining element— a gesture that shapes hybrid ontologies of
+          existential space.
+        </p>
+        <hr />
+        <p>
+        <h2>The Collection</h2>
+        <div class="image-grid">
+          <div width="auto" height="auto">
+            <a style="border: none;"><img id="img1" src="./assets/imgs/previews/light/1.jpg" /></a>
+            <i>Recursive Tree (a)</i> <a onclick="changeImage('img1')">+/-</a><br>
+            <p class="desc">Reserved</p>
+          </div>
+          <div width="auto" height="auto"><a style="border: none;"><img id="img2"
+                src="./assets/imgs/previews/light/2.jpg" /></a>
+            <i>ASCII Tree (a)</i> <a onclick="changeImage('img2')">+/-</a><br>
+            <p class="desc">$200 (USDC)</p>
+          </div>
+          <div width="auto" height="auto"><a style="border: none;"> <img id="img3"
+                src="./assets/imgs/previews/light/3.jpg" /></a>
+            <i>Modulo (a)</i> <a onclick="changeImage('img3')">+/-</a><br>
+            <p class="desc">$200 (USDC)</p>
+          </div>
+        </div>
+        <br>
+        <div class="image-grid">
+          <div width="auto" height="auto"><a style="border: none;"> <img id="img4"
+                src="./assets/imgs/previews/light/4.jpg" /></a>
+            <i>Binary Tree (a)</i> <a onclick="changeImage('img4')">+/-</a><br>
+            <p class="desc">$200 (USDC)</p>
+          </div>
+          <div width="auto" height="auto"><a style="border: none;"> <img id="img5"
+                src="./assets/imgs/previews/light/5.jpg" /></a>
+            <i>Triangles (a)</i><a onclick="changeImage('img5')">+/-</a><br>
+            <p class="desc">$200 (USDC)
+            <p>
+          </div>
+          <div width="auto" height="auto"><a style="border: none;"> <img id="img6"
+                src="./assets/imgs/previews/light/6.jpg" /></a>
+            <i>File Tree (a)</i><a onclick="changeImage('img6')">+/-</a><br>
+            <p class="desc">$200 (USDC)
+            <p>
+          </div>
+        </div>
+        <br>
+        <div class="image-grid">
+          <div width="auto" height="auto"><a style="border: none;"> <img id="img7"
+                src="./assets/imgs/previews/light/7.jpg" /></a>
+            <i>Binary Tree (a)</i><a onclick="changeImage('img7')">+/-</a><br>
+            <p class="desc">$200 (USDC)
+            <p>
+          </div>
+          <div width="auto" height="auto"><a style="border: none;"> <img id="img8"
+                src="./assets/imgs/previews/light/8.jpg" /></a>
+            <i>Dutree (a)</i><a onclick="changeImage('img8')">+/-</a><br>
+            <p class="desc">Reserved
+            <p>
+          </div>
+          <div width="auto" height="auto"><a style="border: none;"> <img id="img9"
+            src="./assets/imgs/previews/light/9.jpg" /></a>
+            <i>List Sort (a)</i><a onclick="changeImage('img8')">+/-</a><br>
+            <p class="desc">Reserved
+            <p>
+          </div>
+        </div>
+        </p>
+        <hr />
+        <p>
+          All pieces are created with a command-line interface and available as unique editions of hand signed physical
+          plotter drawings + corresponding NFTs on Ethereum (Base). The NFT (Certificate of Authenticity) acts as
+          provenance for the physical piece shipped, any secondary sale of a work must include the physical.
+        </p>
+        <p>
+          Available layouts
+        </p>
+        <p>
+          - Black ink on light grey (perla) Tiziano (160g/m2) paper<br>
+          - Silver ink on black photo cardboard (230g/m2)
+        </p>
+        <p>
+          Size: 210 x 297 mm (A4)
+        </p>
+        <hr />
+        <p>
+          Explore the complete series on the blockchain on <a
+            href="https://opensea.io/collection/terminaldrawings">OpenSea</a>. The collection is currently available for
+          private sale only. If you're interested in a specific piece, write a DM on <a href="https://x.com/_stc">X
+            (Twitter)</a>, <a href="https://warpcast.com/stc">Farcaster</a> or <a
+            href="https://www.instagram.com/0xstc/">Instagram</a>.
+        </p>
+        <br>
+        <p>© Agoston Nagy 2024</p>
+      </section>
+    </div>
+  </div>
+  <script>
+    function changeImage(id) {
+      const img = document.getElementById(id);
+      const path = './assets/imgs/previews';
+      img.src.includes('dark') ? img.src = path + '/light/' + split_at_index(id, 3) + '.jpg' : img.src = path + '/dark/' + split_at_index(id, 3) + '.jpg';
+    }
+    function split_at_index(value, index) {
+      return value.substring(index);
+    }
+    document.querySelectorAll('img').forEach(img => {
+      if (img.id) {
+        img.addEventListener('click', () => {
+          const fullScreen = document.createElement('div');
+          fullScreen.style.position = 'fixed';
+          fullScreen.style.top = '0';
+          fullScreen.style.left = '0';
+          fullScreen.style.width = '100vw';
+          fullScreen.style.height = '100vh';
+          fullScreen.style.background = 'rgba(0, 0, 0, 0.4)';
+          fullScreen.style.display = 'flex';
+          fullScreen.style.justifyContent = 'center';
+          fullScreen.style.alignItems = 'center';
+          fullScreen.style.zIndex = '9999';
+
+          const fullImg = document.createElement('img');
+          fullImg.src = img.src;
+          fullImg.style.maxWidth = '90%';
+          fullImg.style.maxHeight = '90%';
+          fullImg.style.cursor = 'zoom-out';
+
+          fullScreen.appendChild(fullImg);
+          document.body.appendChild(fullScreen);
+
+          fullScreen.addEventListener('click', () => {
+            document.body.removeChild(fullScreen);
+          });
+        });
       }
-      function split_at_index(value, index) {
-        return value.substring(index);
-      }
-      document.querySelectorAll('img').forEach(img => {
-  img.addEventListener('click', () => {
-    const fullScreen = document.createElement('div');
-    fullScreen.style.position = 'fixed';
-    fullScreen.style.top = '0';
-    fullScreen.style.left = '0';
-    fullScreen.style.width = '100vw';
-    fullScreen.style.height = '100vh';
-    fullScreen.style.background = 'rgba(0, 0, 0, 0.9)';
-    fullScreen.style.display = 'flex';
-    fullScreen.style.justifyContent = 'center';
-    fullScreen.style.alignItems = 'center';
-    fullScreen.style.zIndex = '9999';
-
-    const fullImg = document.createElement('img');
-    fullImg.src = img.src;
-    fullImg.style.maxWidth = '90%';
-    fullImg.style.maxHeight = '90%';
-    fullImg.style.cursor = 'zoom-out';
-
-    fullScreen.appendChild(fullImg);
-    document.body.appendChild(fullScreen);
-
-    fullScreen.addEventListener('click', () => {
-      document.body.removeChild(fullScreen);
     });
-  });
-});
   </script>
-  </body>
+</body>
+
 </html>
