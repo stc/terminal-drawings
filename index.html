@@ -52,65 +52,13 @@
         <hr />
         <p>
         <h2>The Collection</h2>
-        <div class="image-grid">
-          <div width="auto" height="auto">
-            <a style="border: none;"><img id="img1" src="./assets/imgs/previews/light/1.jpg" /></a>
-            <i>Recursive Tree (a)</i> <a onclick="changeImage('img1')" style="text-decoration:none;">☼/☾</a><br>
-            <p class="desc">Reserved</p>
-          </div>
-          <div width="auto" height="auto"><a style="border: none;"><img id="img2"
-                src="./assets/imgs/previews/light/2.jpg" /></a>
-            <i>ASCII Tree (a)</i> <a onclick="changeImage('img2')" style="text-decoration:none;">☼/☾</a><br>
-            <p class="desc">$200 (USDC)</p>
-          </div>
-          <div width="auto" height="auto"><a style="border: none;"> <img id="img3"
-                src="./assets/imgs/previews/light/3.jpg" /></a>
-            <i>Modulo (a)</i> <a onclick="changeImage('img3')" style="text-decoration:none;">☼/☾</a><br>
-            <p class="desc">$200 (USDC)</p>
-          </div>
-        </div>
+        <div class="image-grid"></div>
         <br>
-        <div class="image-grid">
-          <div width="auto" height="auto"><a style="border: none;"> <img id="img4"
-                src="./assets/imgs/previews/light/4.jpg" /></a>
-            <i>Binary Tree (a)</i> <a onclick="changeImage('img4')" style="text-decoration:none;">☼/☾</a><br>
-            <p class="desc">Reserved</p>
-          </div>
-          <div width="auto" height="auto"><a style="border: none;"> <img id="img5"
-                src="./assets/imgs/previews/light/5.jpg" /></a>
-            <i>Triangles (a)</i> <a onclick="changeImage('img5')" style="text-decoration:none;">☼/☾</a><br>
-            <p class="desc">$200 (USDC)
-            <p>
-          </div>
-          <div width="auto" height="auto"><a style="border: none;"> <img id="img6"
-                src="./assets/imgs/previews/light/6.jpg" /></a>
-            <i>File Tree (a)</i> <a onclick="changeImage('img6')" style="text-decoration:none;">☼/☾</a><br>
-            <p class="desc">$200 (USDC)
-            <p>
-          </div>
-        </div>
+        <div class="image-grid"></div>
         <br>
-        <div class="image-grid">
-          <div width="auto" height="auto"><a style="border: none;"> <img id="img7"
-                src="./assets/imgs/previews/light/7.jpg" /></a>
-            <i>Turtle (a)</i> <a onclick="changeImage('img7')" style="text-decoration:none;">☼/☾</a><br>
-            <p class="desc">$200 (USDC)
-            <p>
-          </div>
-          <div width="auto" height="auto"><a style="border: none;"> <img id="img8"
-                src="./assets/imgs/previews/light/8.jpg" /></a>
-            <i>Dutree (a)</i> <a onclick="changeImage('img8')" style="text-decoration:none;">☼/☾</a><br>
-            <p class="desc">Reserved
-            <p>
-          </div>
-          <div width="auto" height="auto"><a style="border: none;"> <img id="img9"
-            src="./assets/imgs/previews/light/9.jpg" /></a>
-            <i>List Sort (a)</i> <a onclick="changeImage('img9')" style="text-decoration:none;">☼/☾</a><br>
-            <p class="desc">Reserved
-            <p>
-          </div>
-        </div>
+        <div class="image-grid"></div>
         </p>
+        <script src="components.js"></script>
         <hr />
         <p>
           All pieces are created with custom code, executed in a command-line interface and available as unique editions of hand signed physical
@@ -131,7 +79,7 @@
         <p>
           Explore the complete series on the blockchain on <a
             href="https://opensea.io/collection/terminaldrawings">OpenSea</a>. The collection is currently available for
-          private sale only. If you're interested in a specific piece, write a DM on <a href="https://x.com/_stc">X
+          early collectors as private sale only. If you're interested in a specific piece, write a DM on <a href="https://x.com/_stc">X
             (Twitter)</a>, <a href="https://warpcast.com/stc">Farcaster</a> or <a
             href="https://www.instagram.com/0xstc/">Instagram</a>.
         </p>
@@ -140,46 +88,6 @@
       </section>
     </div>
   </div>
-  <script>
-    function changeImage(id) {
-      const img = document.getElementById(id);
-      const path = './assets/imgs/previews';
-      img.src.includes('dark') ? img.src = path + '/light/' + split_at_index(id, 3) + '.jpg' : img.src = path + '/dark/' + split_at_index(id, 3) + '.jpg';
-    }
-    function split_at_index(value, index) {
-      return value.substring(index);
-    }
-    document.querySelectorAll('img').forEach(img => {
-      if (img.id) {
-        img.addEventListener('click', () => {
-          const fullScreen = document.createElement('div');
-          fullScreen.style.position = 'fixed';
-          fullScreen.style.top = '0';
-          fullScreen.style.left = '0';
-          fullScreen.style.width = '100vw';
-          fullScreen.style.height = '100vh';
-          fullScreen.style.background = 'rgba(0, 0, 0, 0.4)';
-          fullScreen.style.display = 'flex';
-          fullScreen.style.justifyContent = 'center';
-          fullScreen.style.alignItems = 'center';
-          fullScreen.style.zIndex = '9999';
-
-          const fullImg = document.createElement('img');
-          fullImg.src = img.src;
-          fullImg.style.maxWidth = '90%';
-          fullImg.style.maxHeight = '90%';
-          fullImg.style.cursor = 'zoom-out';
-
-          fullScreen.appendChild(fullImg);
-          document.body.appendChild(fullScreen);
-
-          fullScreen.addEventListener('click', () => {
-            document.body.removeChild(fullScreen);
-          });
-        });
-      }
-    });
-  </script>
 </body>
 
 </html>
