@@ -2,7 +2,7 @@ createGallery = () => {
     let imgList = [
         { title: "Recursive Tree (a)", fileName: "./assets/imgs/previews/light/1.jpg", id: "img1", state: "reserved" },
         { title: "ASCII Tree (a)", fileName: "./assets/imgs/previews/light/2.jpg", id: "img2", state: "available" },
-        { title: "Modulo (a)", fileName: "./assets/imgs/previews/light/3.jpg", id: "img3", state: "available" },
+        { title: "Modulo (a)", fileName: "./assets/imgs/previews/light/3.jpg", id: "img3", state: "transferred" },
 
         { title: "Binary Tree (a)", fileName: "./assets/imgs/previews/light/4.jpg", id: "img4", state: "reserved" },
         { title: "Triangles (a)", fileName: "./assets/imgs/previews/light/5.jpg", id: "img5", state: "available" },
