@@ -4,7 +4,7 @@ createGallery = () => {
         { title: "ASCII Tree (a)", fileName: "./assets/imgs/previews/light/2.jpg", id: "img2", state: "available" },
         { title: "Modulo (a)", fileName: "./assets/imgs/previews/light/3.jpg", id: "img3", state: "transferred" },
 
-        { title: "Binary Tree (a)", fileName: "./assets/imgs/previews/light/4.jpg", id: "img4", state: "reserved" },
+        { title: "Binary Tree (a)", fileName: "./assets/imgs/previews/light/4.jpg", id: "img4", state: "transferred" },
         { title: "Triangles (a)", fileName: "./assets/imgs/previews/light/5.jpg", id: "img5", state: "available" },
         { title: "File Tree (a)", fileName: "./assets/imgs/previews/light/6.jpg", id: "img6", state: "available" },
 
