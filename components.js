@@ -1,6 +1,6 @@
 createGallery = () => {
     let imgList = [
-        { title: "Recursive Tree (a)", fileName: "./assets/imgs/previews/light/1.jpg", id: "img1", state: "reserved" },
+        { title: "Recursive Tree (a)", fileName: "./assets/imgs/previews/light/1.jpg", id: "img1", state: "available" },
         { title: "ASCII Tree (a)", fileName: "./assets/imgs/previews/light/2.jpg", id: "img2", state: "available" },
         { title: "Modulo (a)", fileName: "./assets/imgs/previews/light/3.jpg", id: "img3", state: "transferred" },
 
@@ -10,7 +10,7 @@ createGallery = () => {
 
         { title: "Turtle (a)", fileName: "./assets/imgs/previews/light/7.jpg", id: "img7", state: "available" },
         { title: "Dutree (a)", fileName: "./assets/imgs/previews/light/8.jpg", id: "img8", state: "available" },
-        { title: "List Sort (a)", fileName: "./assets/imgs/previews/light/9.jpg", id: "img9", state: "reserved" }
+        { title: "List Sort (a)", fileName: "./assets/imgs/previews/light/9.jpg", id: "img9", state: "available" }
     ]
 
     addImageRow(imgList.slice(0, 3), document.getElementsByClassName('image-grid')[0])
