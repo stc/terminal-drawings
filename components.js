@@ -2,9 +2,9 @@ createGallery = () => {
     let imgList = [
         { title: "Recursive Tree (a)", fileName: "./assets/imgs/previews/light/1.jpg", id: "img1", state: "available" },
         { title: "ASCII Tree (a)", fileName: "./assets/imgs/previews/light/2.jpg", id: "img2", state: "available" },
-        { title: "Modulo (a)", fileName: "./assets/imgs/previews/light/3.jpg", id: "img3", state: "transferred" },
+        { title: "Modulo (a)", fileName: "./assets/imgs/previews/light/3.jpg", id: "img3", state: "<a href='https://manifold.gallery/base:0xcd5992b524d6f2b4f43fefa7790cf169f140da21/3'>transferred</a>" },
 
-        { title: "Binary Tree (a)", fileName: "./assets/imgs/previews/light/4.jpg", id: "img4", state: "transferred" },
+        { title: "Binary Tree (a)", fileName: "./assets/imgs/previews/light/4.jpg", id: "img4", state: "<a href='https://manifold.gallery/base:0xcd5992b524d6f2b4f43fefa7790cf169f140da21/4'>transferred</a>" },
         { title: "Triangles (a)", fileName: "./assets/imgs/previews/light/5.jpg", id: "img5", state: "available" },
         { title: "File Tree (a)", fileName: "./assets/imgs/previews/light/6.jpg", id: "img6", state: "available" },
 
